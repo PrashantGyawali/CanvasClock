@@ -24,10 +24,11 @@ function hourhand(hour_angle){
 draw.beginPath();
 draw.translate(h,w);
 draw.rotate(hour_angle);
-draw.moveTo(5,0);
+draw.moveTo(12,0);
 draw.lineTo(100,0);
 draw.strokeStyle='rgb(50,50,50)';
 draw.lineWidth=10;
+draw.lineCap = "round";
 draw.stroke();
 draw.rotate(-hour_angle);
 draw.translate(-h,-w);
@@ -38,8 +39,9 @@ function minutehand(minute_angle){
     draw.beginPath();
     draw.translate(h,w);
     draw.rotate(minute_angle);
-    draw.moveTo(5,0);
+    draw.moveTo(12,0);
     draw.lineTo(125,0);
+    draw.lineCap = "round";
     draw.strokeStyle='rgb(25,25,25)';
     draw.lineWidth=7.5;
     draw.stroke();
@@ -51,7 +53,7 @@ function secondhand(second_angle){
     draw.beginPath();
     draw.translate(h,w);
     draw.rotate(second_angle);
-    draw.moveTo(5,0);
+    draw.moveTo(10,0);
     draw.lineTo(150,0);
     draw.strokeStyle='rgb(0,0,0)';
     draw.lineWidth=5;
